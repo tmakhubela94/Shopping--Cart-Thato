@@ -1,84 +1,69 @@
-  
-  /* cart */
-  .cartTab {
-    width: 400px;
-    background-color: white;
-    color: black;
-    position: fixed;
-    top: 0;
-    right: -400px;
-    bottom: 0;
-    display: grid;
-    grid-template-rows: 70px 1fr 70px;
-    transition: 0.5s;
-  }
-  body.showCart .cartTab {
-    right: 0;
-  }
-  body.showCart .container {
-    transform: translateX(-250px);
-  }
-  .cartTab h1 {
-    padding: 20px;
-    margin: 0;
-    font-weight: 300;
-  }
-  .cartTab .btn {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cartTab button {
-    background-color: #e80e0e;
-    border: none;
-    font-family: Poppins;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  .cartTab .close {
-    background-color: #eee;
-  }
-  .listCart .item img {
-    width: 100%;
-  }
-  .listCart .item {
-    display: grid;
-    grid-template-columns: 70px 150px 50px 1fr;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-  }
-  .listCart .quantity span {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-    color: #555;
-    cursor: pointer;
-  }
-  .listCart .quantity span:nth-child(2) {
-    background-color: transparent;
-    color: black;
-    cursor: auto;
-  }
-  .listCart .item:nth-child(even) {
-    background-color: #eee1;
-  }
-  .listCart {
-    overflow: auto;
-  }
-  .listCart::-webkit-scrollbar {
-    width: 0;
-  }
-  @media only screen and (max-width: 992px) {
-    .listProduct {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* mobile */
-  @media only screen and (max-width: 768px) {
-    .listProduct {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#products {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+#cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+#shipping-details {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
