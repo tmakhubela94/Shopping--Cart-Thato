@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Range Shopping Cart with Shipping Details</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Beauty Range Shopping Cart</h1>
-        <div id="products">
-            <!-- Products will be dynamically added here -->
+    <H1><b><I>Nala Reign Cart</I></b></H1>
+  <div class="container">
+    <h2><i>Shopping Cart</i></h2>
+      <div class="products">
+        <div class="product">
+          <div class="product-box">
+            <img src="https://www.shutterstock.com/image-photo/homemade-facial-mask-scrub-by-260nw-1044222562.jpg" height="200" alt="">
+            <span class="name">Product 1</span>
+            <span class="price">$10</span>
+            <input class="quantity" type="number" value="1" min="1">
+            <button class="add-to-cart" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+          </div>
         </div>
-    </div>
-    <div id="cart">
-        <h2>Cart</h2>
-        <ul id="cart-items">
-            <!-- Cart items will be dynamically added here -->
-        </ul>
-        <p>Total: <span id="total-price">$0.00</span></p>
-        <div id="shipping-details">
-            <h2>Shipping Details</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter your name">
-            <label for="address">Address:</label>
-            <input type="text" id="address" placeholder="Enter your address">
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" placeholder="Enter your phone number">
+        <div class="product">
+          <div class="product-box">
+            <img src="https://www.nirvanabotanics.com/cdn/shop/files/bestwhiteningserumpakistan_1200x.png?v=1701949146" height="200" alt="">
+            <span class="name">Product 2</span>
+            <span class="price">$20</span>
+            <input class="quantity" type="number" value="1" min="1">
+            <button class="add-to-cart" onclick="addToCart('Product 2', 20)">Add to Cart</button>
         </div>
-        <button id="checkout-btn">Checkout</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2dYMnkCNzn2uu0veFoV3SqZZXJ9hsiGVhbg&s" height="200" alt="">
+            <span class="name">Product 3</span>
+            <span class="price">$30</span>
+            <input class="quantity" type="number" value="1" min="1">
+            <button class="add-to-cart" onclick="addToCart('Product 3', 30)">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Add more products here -->
+      </div>
+    <div class="cart">
+      <h2><i>Cart</i></h2>
+      <ul class="cart-items"></ul>
+      <div>Total: $<span id="total-price">0</span></div>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
